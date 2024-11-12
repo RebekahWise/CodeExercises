@@ -11,8 +11,10 @@ async function getCardInfo() {
 
 //clear search results
 function removeItems() {
-  const list = document.querySelector("li");
-    list.remove();
+  const list = document.querySelectorAll("li");
+  list.forEach(function (item) {
+    item.remove();
+  });
 }
 
 //add matching results to search results list
@@ -21,6 +23,7 @@ function addListItem(gif) {
   const newLi = document.createElement("li");
   newLi.innerHTML = `<img src="${gif}">`;
   ul.append(newLi);
+  input.value = "";
 }
 
 const search = document.querySelector("#search");
