@@ -23,7 +23,6 @@ function addListItem(gif) {
   const newLi = document.createElement("li");
   newLi.innerHTML = `<img src="${gif}">`;
   ul.append(newLi);
-  gif = "";
 }
 
 const search = document.querySelector("#search");
