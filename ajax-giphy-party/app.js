@@ -11,10 +11,8 @@ async function getCardInfo() {
 
 //clear search results
 function removeItems() {
-  const list = document.querySelectorAll("li");
-  list.forEach(function (item) {
-    item.remove();
-  });
+  const list = document.querySelector("li");
+    list.remove();
 }
 
 //add matching results to search results list
