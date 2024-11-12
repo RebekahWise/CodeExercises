@@ -5,12 +5,9 @@ async function getCardInfo() {
   let response = await axios.get(
     `https://api.giphy.com/v1/gifs/search?api_key=v6tKCarQbYIOpGZu49NbT9JXwVFf1B2y&q=${input.value}&limit=1`
   );
-  console.log(response);
   gif = response.data.data[0].images.fixed_height.url;
   return gif;
 }
-
-//const result = getCardInfo();
 
 //clear search results
 function removeItems() {
@@ -24,19 +21,18 @@ function removeItems() {
 function addListItem(gif) {
   const ul = document.querySelector("ul");
   const newLi = document.createElement("li");
-  newLi.innerHTML = `<img src= ${gif} >`;
+  newLi.innerHTML = `<img src="${gif}">`;
   ul.append(newLi);
   gif = "";
 }
 
-//let card = await getCardInfo();
-
 const search = document.querySelector("#search");
 const remove = document.querySelector("#remove");
 
-search.addEventListener("click", function (e) {
+search.addEventListener("click", async function (e) {
   e.preventDefault();
-  addListItem(getCardInfo());
+  const gif = await getCardInfo();
+  addListItem(gif);
 });
 
 remove.addEventListener("click", function (e) {
