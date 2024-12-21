@@ -1,4 +1,7 @@
 def remove_every_other(lst):
+    other = lst[0::2]
+    print(other)
+       
     """Return a new list of other item.
 
         >>> lst = [1, 2, 3, 4, 5]

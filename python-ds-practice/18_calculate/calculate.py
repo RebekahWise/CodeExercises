@@ -1,4 +1,52 @@
 def calculate(operation, a, b, make_int=False, message='The result is'):
+    if operation == 'subtract':
+        if make_int:
+            return f'{message} {int(a - b)}'
+        else:
+            return f'{message} {a-b}'
+    elif operation == 'add':
+        if make_int:
+            return f'{message} {int(a + b)}'
+        else:
+            return f'{message} {a+b}'   
+    elif operation == 'multiply':
+        if make_int:
+            return f'{message} {int(a * b)}'
+        else:
+            return f'{message} {a*b}'
+    elif operation == 'divide':
+        if make_int:
+            return f'{message} {int(a / b)}'
+        else:
+            return f'{message} {a/b}'
+    else:
+        return 'None'
+
+#or
+
+def calculate(operation, a, b, make_int=False, message='The result is'):
+    if operation == 'subtract':
+        if make_int:
+            print(f'{message} {int(a - b)}')
+        else:
+            print(f'{message} {a-b}')
+    elif operation == 'add':
+        if make_int:
+            print(f'{message} {int(a + b)}')
+        else:
+            print(f'{message} {a+b}')  
+    elif operation == 'multiply':
+        if make_int:
+            print(f'{message} {int(a * b)}')
+        else:
+            print(f'{message} {a*b}')
+    elif operation == 'divide':
+        if make_int:
+            print(f'{message} {int(a / b)}')
+        else:
+            print(f'{message} {a/b}')
+    else:
+        print('None')
     """Perform operation on a + b, ()possibly truncating) & returning w/msg.
 
     - operation: 'add', 'subtract', 'multiply', or 'divide'

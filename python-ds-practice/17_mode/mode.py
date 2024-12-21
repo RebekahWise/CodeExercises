@@ -1,4 +1,9 @@
 def mode(nums):
+    mode = 0
+    for num in nums:
+        if nums.count(num) > mode:
+            mode = num
+    print(mode)
     """Return most-common number in list.
 
     For this function, there will always be a single-most-common value;
@@ -11,9 +16,5 @@ def mode(nums):
         >>> mode([2, 2, 3, 3, 2])
         2
     """
-    modes = 0
-    for num in nums:
-        if nums.count(num) > modes:
-            modes = num
-    print(mode(modes))
+    
         

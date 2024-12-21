@@ -1,4 +1,19 @@
 def two_oldest_ages(ages):
+    old1 = 0
+    old2 = 0
+    ages2 = ages
+    for age in ages:
+        if age > old1:
+            old1 = age
+    while old1 in ages2:
+        ages2.remove(old1)
+    for age in ages2:
+        if age > old2:
+            old2 = age
+    oldest = (old1, old2)
+    print(oldest)
+            
+
     """Return two distinct oldest ages as tuple (second-oldest, oldest)..
 
         >>> two_oldest_ages([1, 2, 10, 8])

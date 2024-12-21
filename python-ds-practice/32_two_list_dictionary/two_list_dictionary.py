@@ -1,4 +1,8 @@
 def two_list_dictionary(keys, values):
+    while len(keys) > len(values):
+        values.append('None')
+    book = dict(zip(keys, values))
+    print(book)
     """Given keys and values, make dictionary of those.
     
         >>> two_list_dictionary(['x', 'y', 'z'], [9, 8, 7])

@@ -1,4 +1,8 @@
 def same_frequency(num1, num2):
+    sort1 = sorted(str(num1))
+    sort2 = sorted(str(num2))
+    print(sort1 == sort2)
+
     """Do these nums have same frequencies of digits?
     
         >>> same_frequency(551122, 221515)
@@ -10,3 +14,4 @@ def same_frequency(num1, num2):
         >>> same_frequency(1212, 2211)
         True
     """
+    

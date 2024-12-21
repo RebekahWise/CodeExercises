@@ -1,4 +1,15 @@
 def find_greater_numbers(nums):
+    count = 0
+    for num in nums:
+        i = (nums.index(num) + 1)
+        while i < len(nums):
+            if num < nums[i]:
+                count = count + 1
+            i = i+1
+    print(count)
+
+
+
     """Return # of times a number is followed by a greater number.
 
     For example, for [1, 2, 3], the answer is 3:
