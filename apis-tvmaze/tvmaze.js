@@ -4,6 +4,14 @@ const $showsList = $("#showsList");
 const $episodesArea = $("#episodesArea");
 const $searchForm = $("#searchForm");
 
+async function getEpisodesOfShow(id) {
+  const response = await axios.get(
+    `http://api.tvmaze.com/shows/<2678>/episodes`
+  );
+  console.log(response);
+}
+
+getEpisodesOfShow(2678);
 /** Given a search term, search for tv shows that match that query.
  *
  *  Returns (promise) array of show objects: [show, show, ...].
